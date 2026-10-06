@@ -120,7 +120,7 @@ const PROJECTS = [
 
 const INFO = {
   photo: ['profile-1.jpg', 1068, 1600],
-  headline: '“Marika” (Brand Creative) between the idea and the set',
+  headline: 'MARI. ALWAYS THINKING BIG.',
   sections: [
     ['What drives my work', [
       ['Own mind', 'Develop brand ideas across 360° marketing and bring them into the visual world through production, styling and photography.'],
@@ -129,13 +129,15 @@ const INFO = {
     ]],
     ['Looking ahead', [
       [null, 'International and intercultural creative teams.'],
-      [null, 'High fashion, design and creative fields.'],
+      [null, 'High fashion, music industry, design and creative fields.'],
       [null, 'Taking on projects where strategy, brand and visual execution meet.'],
     ]],
   ],
   rows: [
+    ['Location', 'Based in Czechia, open to relocation.'],
     ['LinkedIn', '<a class="uline" href="https://www.linkedin.com/in/marika-holi%C5%A1ov%C3%A1/" target="_blank" rel="noopener">Marika Holišová</a>'],
     ['Instagram', '<a class="uline" href="https://www.instagram.com/fruttidi_mari" target="_blank" rel="noopener">@fruttidi_mari</a>'],
+    ['CV', '<a class="uline" href="assets/cv-marika-holisova.pdf" download="CV Marika Holisova.pdf">Download PDF</a>'],
     ['E-mail', '<a class="uline" href="mailto:marikaholisova65@gmail.com">marikaholisova65@gmail.com</a>'],
   ],
 };
@@ -620,7 +622,7 @@ function setView(v, { hash = true } = {}) {
   if (hash) setHash(v === 'work' ? '' : v);
 }
 
-document.querySelectorAll('.menu a').forEach((a) =>
+document.querySelectorAll('.menu a[data-view]').forEach((a) =>
   a.addEventListener('click', (e) => {
     e.preventDefault();
     const v = a.dataset.view;
@@ -745,7 +747,7 @@ function animateIn(v) {
 ------------------------------------------------------------------- */
 const ROLES = [
   '(Creative Concept)', '(Campaigns)', '(Brand Strategy)', '(Brand Guidelines)', '(Naming)',
-  '(Tone of Voice)', '(Styling)', '(Photography Assistance)', '(Production)',
+  '(Tone of Voice)', '(Styling)', '(Creative Direction)', '(Production)',
 ];
 const logoRoles = $('#logoRoles');
 let roleI = 0;
